@@ -3,10 +3,6 @@
 import * as path from 'path'
 import { createServer } from 'http'
 import express, { response } from 'express'
-import { Chart, PieController, ArcElement, Legend, Tooltip, Title } from 'chart.js';
-
-Chart.register(PieController, ArcElement, Title, Legend, Tooltip);
- console.log(Chart)
 
  
 const app = express()
