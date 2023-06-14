@@ -22,8 +22,6 @@
     },
     "homepage": "https://github.com/ju5tu5/barebonechat#readme",
     "dependencies": {
-        "chart.js": "^4.3.0",
-        "chartjs-node-canvas": "^4.1.6",
         "ejs": "^3.1.9",
         "express": "^4.17.1"
     }
