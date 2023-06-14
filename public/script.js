@@ -1,16 +1,3 @@
-const ctx = document.getElementById('myChart').getContext('2d');
-const myChart = new Chart(ctx, {
-	type: 'bar',
-	data: {
-		labels: Object.keys(data),
-		datasets: [
-			{
-				label: 'Number of GitHub Stars',
-				data: Object.values(data),
-			},
-		],
-	},
-});
 
 // DROP DOWN MENU
 
