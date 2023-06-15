@@ -25,18 +25,41 @@
     color: #fff;
 }
  */
+
+ /* graph styling */
  .chartlist{
     position: relative;
-    left: 0;
+   padding-left: 0;
+   border-left: 1px solid black;
  }
  .chartlist > li { 
     display: flex;
     flex-direction: column;
-    width: 100%;
-    list-style-type: none;
+   list-style-type: none;
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+    margin: 1rem 0 1rem 0;
+    
   }
+  .chartlist :nth-child(even){
+    border-top: 0;
+    border-bottom: 0;
+  }
+
+
 li > a{
     display: flex;
     justify-content: space-between;
     padding: 1rem;
+    text-decoration: none;
+}
+
+.chartlist > li:hover{
+    background-color: lightblue;
+}
+.day-counter{
+    width:100%;
+}
+.day-counter:hover{
+    font-weight: bold;
 }
