@@ -1,4 +1,4 @@
-.interceptor-selector {
+/* .interceptor-selector {
     position: relative;
 }
 
@@ -24,11 +24,19 @@
     background-color: royalblue;
     color: #fff;
 }
-
-a > path:hover{
-    border: 10px solid black;
-}
-
-body{
-    background-color: purple;
+ */
+ .chartlist{
+    position: relative;
+    left: 0;
+ }
+ .chartlist > li { 
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    list-style-type: none;
+  }
+li > a{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
 }

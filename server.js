@@ -6,7 +6,7 @@ import express, { response } from 'express'
  
 const app = express()
 const http = createServer(app)
-
+const plasticStatsUrl = 'https://s3.eu-west-1.amazonaws.com/data.theoceancleanup.com/systems-dashboard/realtime-data-ocean.json'
 
 
 const port = process.env.PORT || 8000
