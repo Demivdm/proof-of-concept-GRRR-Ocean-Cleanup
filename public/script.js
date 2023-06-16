@@ -40,3 +40,13 @@ dropdownMenuItems.forEach(item=> {
 
 // GRAPH
 
+// how much page
+const howmuch = document.querySelectorAll('.graph-bar')
+const plasticrep = document.querySelector('.plastic-rep')
+
+// loop waardoor alle items met de class graph-bar een on click functie krijgen die de class show activeert
+howmuch.forEach(item => {
+  item.addEventListener('click', function(){
+    plasticrep.classList.toggle('show')
+  })
+})
