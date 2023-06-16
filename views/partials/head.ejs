@@ -4,24 +4,43 @@
     <head>
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>PlantSwap Trivia</title>
+      <title>The Oceancleanup</title>
       <link rel="stylesheet" href="./styles.css" />
-      <script
-        type="module"
-        src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.3.0/chart.min.js"
-        defer
-      ></script>
       <script type="module" src="./script.js" defer></script>
-
-      <script type="text/javascript" src="./chart.js" defer></script>
-
+      <!-- styles voor als het script niet beschikbaar is -->
+      <noscript><link rel="stylesheet" href="./noscript.css" /></noscript>
       <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap"
+        rel="stylesheet"
+      />
     </head>
+    <!-- navigation -->
     <nav>
-      <a href="/">Home</a>
+      <button class="home-button">
+        <a href="/"><span>THE</span> OCEANCLEANUP</a>
+      </button>
       <div class="interceptor-selector">
         <button aria-expanded="false" type="button" class="dropdown-toggle">
-          Choose an interceptor
+          Choose an interceptor<svg
+            fill="#000000"
+            height="50px"
+            width="50px"
+            version="1.1"
+            id="Layer_1"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            viewBox="0 0 330 330"
+            xml:space="preserve"
+          >
+            <path
+              id="arrow-down"
+              d="M325.607,79.393c-5.857-5.857-15.355-5.858-21.213,0.001l-139.39,139.393L25.607,79.393
+	c-5.857-5.857-15.355-5.858-21.213,0.001c-5.858,5.858-5.858,15.355,0,21.213l150.004,150c2.813,2.813,6.628,4.393,10.606,4.393
+	s7.794-1.581,10.606-4.394l149.996-150C331.465,94.749,331.465,85.251,325.607,79.393z"
+            />
+          </svg>
         </button>
         <ul class="interceptor-dropdown" accesskey="ArrowDown">
           <li>
