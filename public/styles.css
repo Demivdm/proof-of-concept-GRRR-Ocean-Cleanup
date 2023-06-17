@@ -91,6 +91,12 @@ nav{
 .interceptor-introduction > p{
     font-size: var(--general-text-fontsize);
 }
+/* interceptor header */
+
+.interceptor-header-img{
+    width: 100%;
+    position: relative;
+}
 
  /* graph styling */
 
@@ -141,6 +147,10 @@ li > a{
 .day-counter:hover{
     font-weight: bold;
 }
+.plastic-percentage{
+    position: absolute;
+    left: -99999999px;
+}
 
 /* plastic representation styling */
 
@@ -157,4 +167,3 @@ li > a{
 .plastic-rep.show {
     display: block;
 }
-
