@@ -3,6 +3,7 @@
     box-sizing: border-box;
     line-height: 3rem;
     font-family: 'Montserrat', sans-serif;
+
 }
 html{
     /* PE dit is zodat alles waar automatisch naar toe gegaan wordt op een scrollende manier gebeurt */
@@ -114,6 +115,7 @@ nav{
     position: relative;
    padding-left: 0;
    border-left: 1px solid black;
+ 
  }
  .chartlist > li { 
     display: flex;
@@ -121,7 +123,9 @@ nav{
    list-style-type: none;
     border-bottom: 1px solid black;
     border-top: 1px solid black;
-    margin: 1rem 0 1rem 0;
+    padding: .1rem;
+   
+
     
   }
   .chartlist :nth-child(even){
@@ -133,16 +137,20 @@ nav{
 li > a{
     display: flex;
     justify-content: space-between;
-    padding: 1rem;
     text-decoration: none;
     font-size: var(--general-text-fontsize);
+    overflow-y: hidden;
 }
 
 .chartlist > li:hover{
     background-color: lightblue;
+    transform: scale(1.01);
+
 }
 .day-counter{
-    width:100%;
+    width:50%;
+    background-color: blue;
+    padding: 2rem;
 }
 .day-counter:hover{
     font-weight: bold;
@@ -150,6 +158,11 @@ li > a{
 .plastic-percentage{
     position: absolute;
     left: -99999999px;
+}
+.plastic-count{
+position: relative;
+top: 2rem;
+left: -2rem;
 }
 
 /* plastic representation styling */
