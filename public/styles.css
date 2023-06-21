@@ -27,6 +27,7 @@ body{
     --primary-color-white: #FFFFFF;
     --secondary-dark-blue: #003755;
     --tertriary-light-blue: #01CBE1;
+    --hover: #8ed1fc;
 }
 
 /* mav styling */
@@ -94,8 +95,12 @@ nav{
 }
 
 .interceptor-dropdown li:hover {
-    background-color: royalblue;
-    color: #fff;
+    background-color: var(--hover);
+    color: var(--primary-color-white);
+}
+
+.interceptor-dropdown > li > a:hover{
+    color: var(--secondary-dark-blue);
 }
 .dropdown-toggle{
     padding: 1rem;
@@ -190,7 +195,7 @@ li > a{
 }
 
 .chartlist > li:hover{
-    background-color: #8ed1fc;
+    background-color: var(--hover);
     transform: scale(1.01);
 
 }
