@@ -1,131 +1,143 @@
 <%- include('./partials/head') %>
-<img class="interceptor-header-img" loading="lazy" src="./assets/interceptor3.jpg" alt="interceptor 001">
-<h2 class="plastic-total">This interceptor cleanup APIkg of plastic in total</h2>
+<img class="interceptor-header-img" loading="lazy" src="./assets/interceptor1.jpg" alt="interceptor 004">
+<h2 class="plastic-total">
 
+<% data.forEach(system => { 
+  if (system.id == 135) { %>
+        <%= system.name %>
+
+  cleaned up <%= system.debris_extracted_total %>Kg of plastic in total</h2>
+  <% }
+}); %>
 <section class="graph-introduction">
   <p>
     Below you can see how much plastic interceptor 1 cleaned up in the past 30 days. Click on a bar to get a visual of the amount of plastic.</p>
 </section>
+<% data.forEach(system => { 
+  if (system.id == 135) { %>
 <ul class="chartlist">
   <li class="graph-bar" >
         <!-- De span is zodat ik iedere bar individueel kan stylen -->
-    <a href="#graph-details"><span class="day-counter">Day 1</span><span class="plastic-percentage">(50%)</span><span class="plastic-count">Number of plastic cleaned</span></a>
+    <a href="#graph-details"><span class="day-counter">Day 1</span><span class="plastic-percentage">(50%)</span><span class="plastic-count"> <%= system.debris_extracted_last_30d %>Kg</span></a>
   </li>
+  
   <li class="graph-bar">
-    <a href="#graph-details"><span class="day-counter">Day 2</span><span class="plastic-percentage">(50%)</span><span class="plastic-count">number of plastic cleaned</span></a>
+    <a href="#graph-details"><span class="day-counter">Day 2</span><span class="plastic-percentage">(50%)</span><span class="plastic-count"><%= system.debris_extracted_last_30d %>Kg</span></a>
 
     </li>
   <li class="graph-bar">
-    <a href="#graph-details"><span class="day-counter">Day 3</span><span class="plastic-percentage">(50%)</span><span class="plastic-count">number of plastic cleaned</span><a>
+    <a href="#graph-details"><span class="day-counter">Day 3</span><span class="plastic-percentage">(50%)</span><span class="plastic-count"><%= system.debris_extracted_last_30d %>Kg</span><a>
   </li>
   <li class="graph-bar">
-    <a href="#graph-details"> <span class="day-counter">Day 4</span><span class="plastic-percentage">(50%)</span><span class="plastic-count">number of plastic cleaned</span><a
+    <a href="#graph-details"> <span class="day-counter">Day 4</span><span class="plastic-percentage">(50%)</span><span class="plastic-count"><%= system.debris_extracted_last_30d %>Kg</span><a
     >
   </li>
   <li class="graph-bar">
-    <a href="#graph-details"> <span class="day-counter">Day 5</span><span class="plastic-percentage">(50%)</span><span class="plastic-count">number of plastic cleaned</span><a
+    <a href="#graph-details"> <span class="day-counter">Day 5</span><span class="plastic-percentage">(50%)</span><span class="plastic-count"><%= system.debris_extracted_last_30d %>Kg</span><a
     >
   </li>
   <li class="graph-bar">
-    <a href="#graph-details"> <span class="day-counter">Day 6</span><span class="plastic-percentage">(50%)</span><span class="plastic-count">number of plastic cleaned</span><a
+    <a href="#graph-details"> <span class="day-counter">Day 6</span><span class="plastic-percentage">(50%)</span><span class="plastic-count"><%= system.debris_extracted_last_30d %>Kg</span><a
     >
   </li>
   <li class="graph-bar">
-    <a href="#graph-details"> <span class="day-counter">Day 7</span><span class="plastic-percentage">(50%)</span><span class="plastic-count">number of plastic cleaned</span><a
+    <a href="#graph-details"> <span class="day-counter">Day 7</span><span class="plastic-percentage">(50%)</span><span class="plastic-count"><%= system.debris_extracted_last_30d %>Kg</span><a
     >
   </li>
   <li class="graph-bar">
-    <a href="#graph-details"> <span class="day-counter">Day 8</span><span class="plastic-percentage">(50%)</span><span class="plastic-count">number of plastic cleaned</span><a>
+    <a href="#graph-details"> <span class="day-counter">Day 8</span><span class="plastic-percentage">(50%)</span><span class="plastic-count"><%= system.debris_extracted_last_30d %>Kg</span><a>
   </li>
   <li class="graph-bar">
-    <a href="#graph-details"> <span class="day-counter">Day 9</span><span class="plastic-percentage">(50%)</span></span class="plastic-count">number of plastic cleaned</span><a
+    <a href="#graph-details"> <span class="day-counter">Day 9</span><span class="plastic-percentage">(50%)</span><span class="plastic-count"><%= system.debris_extracted_last_30d %>Kg</span><a
     >
   </li>
   <li class="graph-bar">
-    <a href="#graph-details"> <span class="day-counter">Day 10</span><span class="plastic-percentage">(50%)</span><span class="plastic-count">number of plastic cleaned</span></a
+    <a href="#graph-details"> <span class="day-counter">Day 10</span><span class="plastic-percentage">(50%)</span><span class="plastic-count"><%= system.debris_extracted_last_30d %>Kg</span></a
     >
   </li>
   <li class="graph-bar">
-    <a href="#graph-details"> <span class="day-counter">Day 11</span><span class="plastic-percentage">(50%)</span><span class="plastic-count">number of plastic cleaned</span></a
+    <a href="#graph-details"> <span class="day-counter">Day 11</span><span class="plastic-percentage">(50%)</span><span class="plastic-count"><%= system.debris_extracted_last_30d %>Kg</span></a
     >
   </li>
   <li class="graph-bar">
-    <a href="#graph-details"> <span class="day-counter">Day 12</span><span class="plastic-percentage">(50%)</span><span class="plastic-count">number of plastic cleaned</span></a
+    <a href="#graph-details"> <span class="day-counter">Day 12</span><span class="plastic-percentage">(50%)</span><span class="plastic-count"><%= system.debris_extracted_last_30d %>Kg</span></a
     >
   </li>
   <li class="graph-bar">
-    <a href="#graph-details"> <span class="day-counter">Day 13</span><span class="plastic-percentage">(50%)</span><span class="plastic-count">number of plastic cleaned</span></a
+    <a href="#graph-details"> <span class="day-counter">Day 13</span><span class="plastic-percentage">(50%)</span><span class="plastic-count"><%= system.debris_extracted_last_30d %>Kg</span></a
     >
   </li>
   <li class="graph-bar">
-    <a href="#graph-details"> <span class="day-counter">Day 14</span><span class="plastic-percentage">(50%)</span><span class="plastic-count">number of plastic cleaned</span></a
+    <a href="#graph-details"> <span class="day-counter">Day 14</span><span class="plastic-percentage">(50%)</span><span class="plastic-count"><%= system.debris_extracted_last_30d %>Kg</span></a
     >
   </li>
   <li class="graph-bar">
-    <a href="#graph-details"> <span class="day-counter">Day 15</span><span class="plastic-percentage">(50%)</span><span class="plastic-count">number of plastic cleaned</span></a
+    <a href="#graph-details"> <span class="day-counter">Day 15</span><span class="plastic-percentage">(50%)</span><span class="plastic-count"><%= system.debris_extracted_last_30d %>Kg</span></a
     >
   </li>
   <li class="graph-bar">
-    <a href="#graph-details"> <span class="day-counter">Day 16</span><span class="plastic-percentage">(50%)</span><span class="plastic-count">number of plastic cleaned</span></a
+    <a href="#graph-details"> <span class="day-counter">Day 16</span><span class="plastic-percentage">(50%)</span><span class="plastic-count"><%= system.debris_extracted_last_30d %>Kg</span></a
     >
   </li>
   <li class="graph-bar">
-    <a href="#graph-details"> <span class="day-counter">Day 17</span><span class="plastic-percentage">(50%)</span><span class="plastic-count">number of plastic cleaned</span></a
+    <a href="#graph-details"> <span class="day-counter">Day 17</span><span class="plastic-percentage">(50%)</span><span class="plastic-count"><%= system.debris_extracted_last_30d %>Kg</span></a
     >
   </li>
   <li class="graph-bar">
-    <a href="#graph-details"> <span class="day-counter">Day 18</span><span class="plastic-percentage">(50%)</span><span class="plastic-count">number of plastic cleaned</span></a
+    <a href="#graph-details"> <span class="day-counter">Day 18</span><span class="plastic-percentage">(50%)</span><span class="plastic-count"><%= system.debris_extracted_last_30d %>Kg</span></a
     >
   </li>
   <li class="graph-bar">
-    <a href="#graph-details"> <span class="day-counter">Day 19</span><span class="plastic-percentage">(50%)</span><span class="plastic-count">number of plastic cleaned</span></a
+    <a href="#graph-details"> <span class="day-counter">Day 19</span><span class="plastic-percentage">(50%)</span><span class="plastic-count"><%= system.debris_extracted_last_30d %>Kg</span></a
     >
   </li>
   <li class="graph-bar">
-    <a href="#graph-details"> <span class="day-counter">Day 20</span><span class="plastic-percentage">(50%)</span><span class="plastic-count">number of plastic cleaned</span></a
+    <a href="#graph-details"> <span class="day-counter">Day 20</span><span class="plastic-percentage">(50%)</span><span class="plastic-count"><%= system.debris_extracted_last_30d %>Kg</span></a
     >
   </li>
   <li class="graph-bar">
-    <a href="#graph-details"> <span class="day-counter">Day 21</span><span class="plastic-percentage">(50%)</span><span class="plastic-count">number of plastic cleaned</span></a
+    <a href="#graph-details"> <span class="day-counter">Day 21</span><span class="plastic-percentage">(50%)</span><span class="plastic-count"><%= system.debris_extracted_last_30d %>Kg</span></a
     >
   </li>
   <li class="graph-bar">
-    <a href="#graph-details"> <span class="day-counter">Day 22</span><span class="plastic-percentage">(50%)</span><span class="plastic-count">number of plastic cleaned</span></a
+    <a href="#graph-details"> <span class="day-counter">Day 22</span><span class="plastic-percentage">(50%)</span><span class="plastic-count"><%= system.debris_extracted_last_30d %>Kg</span></a
     >
   </li>
   <li class="graph-bar">
-    <a href="#graph-details"> <span class="day-counter">Day 23</span><span class="plastic-percentage">(50%)</span><span class="plastic-count">number of plastic cleaned</span></a
+    <a href="#graph-details"> <span class="day-counter">Day 23</span><span class="plastic-percentage">(50%)</span><span class="plastic-count"><%= system.debris_extracted_last_30d %>Kg</span></a
     >
   </li>
   <li class="graph-bar">
-    <a href="#graph-details"> <span class="day-counter">Day 24</span><span class="plastic-percentage">(50%)</span><span class="plastic-count">number of plastic cleaned</span></a
+    <a href="#graph-details"> <span class="day-counter">Day 24</span><span class="plastic-percentage">(50%)</span><span class="plastic-count"><%= system.debris_extracted_last_30d %>Kg</span></a
     >
   </li>
   <li class="graph-bar">
-    <a href="#graph-details"> <span class="day-counter">Day 25</span><span class="plastic-percentage">(50%)</span><span class="plastic-count">number of plastic cleaned</span></a
+    <a href="#graph-details"> <span class="day-counter">Day 25</span><span class="plastic-percentage">(50%)</span><span class="plastic-count"><%= system.debris_extracted_last_30d %>Kg</span></a
     >
   </li>
   <li class="graph-bar">
-    <a href="#graph-details"> <span class="day-counter">Day 26</span><span class="plastic-percentage">(50%)</span><span class="plastic-count">number of plastic cleaned</span></a
+    <a href="#graph-details"> <span class="day-counter">Day 26</span><span class="plastic-percentage">(50%)</span><span class="plastic-count"><%= system.debris_extracted_last_30d %>Kg</span></a
     >
   </li>
   <li class="graph-bar">
-    <a href="#graph-details"> <span class="day-counter">Day 27</span><span class="plastic-percentage">(50%)</span><span class="plastic-count">number of plastic cleaned</span></a
+    <a href="#graph-details"> <span class="day-counter">Day 27</span><span class="plastic-percentage">(50%)</span><span class="plastic-count"><%= system.debris_extracted_last_30d %>Kg</span></a
     >
   </li>
   <li class="graph-bar">
-    <a href="#graph-details"> <span class="day-counter">Day 28</span><span class="plastic-percentage">(50%)</span><span class="plastic-count">number of plastic cleaned</span></a
+    <a href="#graph-details"> <span class="day-counter">Day 28</span><span class="plastic-percentage">(50%)</span><span class="plastic-count"><%= system.debris_extracted_last_30d %>Kg</span></a
     >
   </li>
   <li class="graph-bar">
-    <a href="#graph-details"> <span class="day-counter">Day 29</span><span class="plastic-percentage">(50%)</span><span class="plastic-count">number of plastic cleaned</span></a
+    <a href="#graph-details"> <span class="day-counter">Day 29</span><span class="plastic-percentage">(50%)</span><span class="plastic-count"><%= system.debris_extracted_last_30d %>Kg</span></a
     >
   </li>
   <li class="graph-bar">
-    <a href="#graph-details"> <span class="day-counter">Day 30</span><span class="plastic-percentage">(50%)</span><span class="plastic-count">number of plastic cleaned</span></a>
+    <a href="#graph-details"> <span class="day-counter">Day 30</span><span class="plastic-percentage">(50%)</span><span class="plastic-count"><%= system.debris_extracted_last_30d %>Kg</span></a>
     
   </li>
 </ul>
+<% }
+}); %>
 
 <!-- plastic representation-->
 <section class="plastic-rep" id="graph-details">
@@ -134,8 +146,14 @@
 
 </section>
 <section class="interceptor-location">
-  <h2>This Interceptor is located in ...</h2>
-  <img class="interceptor-header-img" loading="lazy" src="./assets/map-interceptor3.jpg" alt="interceptor 001">
+  <h2>This Interceptor is located in <% data.forEach(system => { 
+    if (system.id == 135) { %>
+          
+  <%= system.location_description %>
+    <% }
+  }); %></h2>
 
 </section>
+
+<img class="interceptor-header-img" loading="lazy" src="./assets/map-interceptor4.jpg" alt="interceptor 004">
 <%- include('./partials/foot') %>

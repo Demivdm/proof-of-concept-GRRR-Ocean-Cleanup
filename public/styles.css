@@ -11,6 +11,11 @@ html{
     scroll-behavior: smooth;
 }
 
+body{
+    margin: 0;
+    padding: 0;
+}
+
 /* general text styling */
 
 :root{
@@ -19,6 +24,9 @@ html{
     --h2-fontsize:2.4rem;
     --general-text-fontsize:2rem;
     /* colors */
+    --primary-color-white: #FFFFFF;
+    --secondary-dark-blue: #003755;
+    --tertriary-light-blue: #01CBE1;
 }
 
 /* mav styling */
@@ -26,15 +34,21 @@ nav{
     box-sizing: border-box;
     width: 100%;
     position: relative;
+    top: -1rem;
 }
 .home-button{
-    padding: 1rem;
+    
     font-size: var(--h1-fontsize);
+    padding: .5rem;
+    background-color: var(--tertriary-light-blue);
+    border: 1px solid var(--tertriary-light-blue);
+    
    
 }
 .home-button > a {
     text-decoration: none;
     font-weight: bold;
+    color: var(--primary-color-white);
 }
 .home-button > a > span{
     font-size: var(--general-text-fontsize);
@@ -44,9 +58,18 @@ nav{
     position: relative;
     display: flex;
     flex-direction: column;
-    margin-top: 3rem;
-    border: 1px solid black;
+    background: linear-gradient(#003755, #01CBE1);
+    border-radius: 4px;
+    
+  
 }
+
+.interceptor-selector > button{
+    background-color: var(--secondary-dark-blue);
+    color: var(--primary-color-white);
+}
+
+
 
 .dropdown-toggle:focus {
     box-shadow: 0 0 0 .25rem rgb(176, 193, 243);
@@ -58,6 +81,11 @@ nav{
     padding: 0;
    
 }
+
+.interceptor-dropdown > li > a{
+    color: var(--primary-color-white);
+}
+
 .interceptor-dropdown.show {
     display: block;
 }
@@ -83,13 +111,24 @@ nav{
 
 .interceptor-introduction{
     position: relative;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
 }
-.interceptor-introduction > h2{
+
+.interceptor-introduction-text{
+    position: relative;
+    text-align: center;
+    background-color: var(--secondary-dark-blue);
+    top: -1rem;
+    padding: .5rem;
+    color: var(--primary-color-white);
+    max-width: 50rem;
+}
+.interceptor-introduction-text > h2{
     font-size: var(--h2-fontsize);
 }
 
-.interceptor-introduction > p{
+.interceptor-introduction-text > p{
     font-size: var(--general-text-fontsize);
 }
 /* interceptor header */
@@ -97,6 +136,8 @@ nav{
 .interceptor-header-img{
     width: 100%;
     position: relative;
+    margin: 0;
+    padding: 0;
 }
 
  /* graph styling */
@@ -104,12 +145,18 @@ nav{
  .plastic-total{
     font-size: var(--h2-fontsize);
     position: relative;
-    margin: 2rem 0 0 .5rem;
+    margin: 0;
+    background-color: var(--tertriary-light-blue);
+    color: var(--primary-color-white);
+    padding: 2rem 1rem 1rem 2rem;
  }
 
  .graph-introduction{
     font-size: var(--general-text-fontsize);
-    margin: 2rem 0 0 .5rem;
+    padding: 1rem 1rem 1rem 2rem;
+    top: 0;
+    background-color: var(--tertriary-light-blue);
+    color: var(--primary-color-white);
  }
  .chartlist{
     position: relative;
@@ -143,14 +190,16 @@ li > a{
 }
 
 .chartlist > li:hover{
-    background-color: lightblue;
+    background-color: #8ed1fc;
     transform: scale(1.01);
 
 }
 .day-counter{
     width:50%;
-    background-color: blue;
+    background-color: var(--secondary-dark-blue);
     padding: 2rem;
+    
+    color: var(--primary-color-white);
 }
 .day-counter:hover{
     font-weight: bold;
@@ -163,6 +212,7 @@ li > a{
 position: relative;
 top: 2rem;
 left: -2rem;
+color: var(--secondary-dark-blue);
 }
 
 /* plastic representation styling */
@@ -172,11 +222,59 @@ left: -2rem;
 }
 .plastic-rep{
     font-size: var(--general-text-fontsize);
-    margin: 0 .5rem 0 .5rem;
+    padding: 1rem 1rem 1rem 2rem;
     display: none;
+    background-color: var(--tertriary-light-blue);
+    color: var(--primary-color-white);
+    margin-bottom: 1rem;
    
 }
 
 .plastic-rep.show {
     display: block;
+}
+
+/* location and map styling */
+
+.interceptor-location{
+    padding: 1rem;
+    background-color: var(--secondary-dark-blue);
+    color: var(--primary-color-white);
+}
+
+@media (min-width: 680px){
+    .interceptor-selector{
+        max-width: 40rem;
+    }
+    
+    .dropdown-toggle > svg{
+        position: relative;
+        margin:0 0 0 1rem;
+    
+    }
+
+    .interceptor-introduction{
+        margin-top: 5rem;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+    }
+
+    .interceptor-footer-img{
+        max-height: 45rem;
+     
+    }
+
+    .plastic-total{
+        padding-right: 50vw;
+    }
+    .graph-introduction{
+        padding-right: 50vw;
+    }
+
+    .plastic-rep{
+        padding-right: 50vw;
+    }
+
 }
